@@ -20,24 +20,300 @@ body {
 
 /* HLAVICKA */
 
+.hlavicka {
+    background-image: url("images/island-hlavicka.jpg");
+    color: white;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 20px 10px 20px;
+    margin: 0;
+    }
+
 .titulek {
     font-family: 'Raleway', serif;
+    font-size: 80px;
+    text-align: center;
+    }
+
+.perex {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+   
 }
 
+.autor {
+    text-align: center;  
+    font-style: italic;
+    font-size: 14px;
+}
 
 /* MENU */
+.menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+}
 
+.menu li {
+    display: block;
+}
 
+.menu a {
+    text-transform: uppercase;
+    color: grey;
+    display: block;
+    text-decoration: none;
+    padding-top: 20px;
+   
+}
 
 
 /* OBSAH */
 
 
+img {
+    max-width: 100%;
+}
 
+h1 {
+    padding: 5 5px;
+}
+
+h2, p {
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: 'Raleway', serif;
+}
+
+.popisek {
+    color: grey;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Raleway', serif;
+}
+
+.popisek a {
+    color: grey;
+}
+
+.popisek-uvod {
+    color: grey;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+}
+
+.popisek-uvod a {
+    color: grey;
+}
+
+.popisek-proc {
+    color: grey;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+}
+
+.popisek-proc a {
+    color: grey;
+}
+
+.popisek-musite {
+    color: grey;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+}
+
+.popisek-musite a {
+    color: grey;
+}
 
 /* FOTOGALERIE */
 
+.foto {
+    text-align: center;
+}
 
+img {
+    width: 100%;
+}
 
+.popisek {
+    font-weight: 600;
+    margin: 2px 4px;    
+}
+
+.popisek-copy {
+    font-weight: normal;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
 
 /* PATICKA */
+
+.paticka{
+    box-shadow: inset 0 15px 30px rgb(202, 200, 200);
+    height: 120px;
+    font-size: 12px;
+    color: rgba(139, 139, 139, 0.712);
+    overflow: hidden;
+}
+
+.paticka a {
+    color: rgba(139, 139, 139, 0.712);
+}
+
+@media (min-width: 500px){
+
+    /* MENU */
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 40px;  
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* OBSAH */
+
+    .popisek-uvod {
+        text-align: right;
+        margin: -50px 10px 0 0;
+        color: white;
+        font-size: 12px;
+    }
+
+    .popisek-uvod a {
+        color: white;
+    }
+
+    .popisek-proc {
+        text-align: right;
+        margin: -50px 10px 0 0;
+        color: white;
+        font-size: 12px;
+    }
+
+    .popisek-proc a {
+        color: white;
+    }
+
+    .popisek-musite {
+        text-align: right;
+        margin: -50px 10px 0 0;
+        color: white;
+        font-size: 12px;
+    }
+
+    .popisek-musite a {
+        color: white;
+    }
+
+    h2 {
+        margin-top: 60px;
+    }
+    
+    .musite2 {
+        margin-top: 60px;
+    }
+
+     /* FOTOGALERIE */
+
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .foto {
+        overflow: hidden;
+        flex-basis: 50%;
+        height: 220px;
+        position: relative;
+    }
+
+    .foto img {
+        display: block;
+        height: 220px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .foto:hover .popisek{
+        transition: 0.5s ease-in;
+        bottom: 0;
+     }
+
+    .popisek {
+        position: absolute;
+        bottom: -50%;
+        transition: 0.5s ease-in;
+        background-color: white;
+        opacity: 0.6;
+        color: white;
+        width: 100%;
+        padding: 0; 
+       }
+
+}
+
+@media (min-width: 1000px) {
+
+    .obsah {
+        width: 960px;
+        background-color: white;
+        margin: -80px auto;
+        box-shadow:  2px 10px 14px lightgrey;
+    }
+
+    .hlavicka {
+        height: 500px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        float: left;
+        text-align: left;
+        width: 33.3%;
+    }
+
+    .uvod {
+        padding-left: 300px;
+        padding-top: 30px;
+    }
+
+    h2 {
+        font-family: 'Raleway', serif;
+        font-size: 30px;
+    }
+
+    .proc {
+        padding-right: 300px;
+    }
+
+    .musite1, .musite2 {
+        padding-left: 300px;
+    }
+
+    .foto {
+        flex-basis: calc(100%/3);
+    }
+    
+   .popisek {
+        color: black;
+        padding: 5px 0px;
+      
+    }
+
+}
